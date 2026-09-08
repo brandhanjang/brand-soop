@@ -175,16 +175,22 @@ h2{font-size:clamp(23px,3.2vw,30px);letter-spacing:-.018em}
 .shot .sub{display:block;font-size:12.5px;color:var(--muted);margin-top:2px;line-height:1.5}
 .note{margin-top:18px;font-size:13px;color:var(--muted);line-height:1.7}
 
-/* ---------- career ---------- */
-.career{margin-top:28px;display:flex;flex-direction:column}
-.career li{display:grid;grid-template-columns:112px minmax(0,1fr);gap:0 18px;padding:13px 0;border-top:1px solid var(--line-soft);align-items:baseline}
-.career li:first-child{border-top:0}
-.career .yr{font-family:var(--mono);font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;letter-spacing:.02em}
-.career .co{display:block;font-size:15px;font-weight:500}
-.career .ro{display:block;font-size:13.5px;color:var(--muted);margin-top:1px}
-.career li.now .co{color:var(--moss);font-weight:600}
-.career li.now .yr{color:var(--moss)}
-@media (max-width:840px){.career li{grid-template-columns:94px minmax(0,1fr);gap:0 12px}}
+/* ---------- tenure ---------- */
+.tenure{margin-top:30px;padding-bottom:28px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 20px}
+.tenure-num{font-family:var(--display);font-size:clamp(56px,9vw,88px);font-weight:700;line-height:.94;letter-spacing:-.035em;color:var(--moss);font-variant-numeric:tabular-nums}
+.tenure-num span{font-size:.32em;font-weight:600;color:var(--ink-2);margin-left:5px;letter-spacing:0}
+.tenure-cap{font-size:15px;color:var(--muted);line-height:1.7}
+
+.fields{margin-top:28px;display:flex;flex-direction:column}
+.fields li{display:grid;grid-template-columns:134px minmax(0,1fr);gap:0 22px;padding:16px 0;border-top:1px solid var(--line-soft)}
+.fields li:first-child{border-top:0;padding-top:0}
+.fields .k{font-size:14.5px;font-weight:600}
+.fields .v{font-size:14.5px;color:var(--ink-2);line-height:1.72}
+.fields li.now .k{color:var(--moss)}
+@media (max-width:840px){
+  .fields li{grid-template-columns:minmax(0,1fr);gap:0}
+  .fields .k{margin-bottom:5px}
+}
 
 /* ---------- declarations ---------- */
 .decl{margin-top:30px;display:flex;flex-direction:column;gap:0}
@@ -399,7 +405,7 @@ footer{padding:26px 0 60px}
         </figure>
       </div>
 
-      <h2 style="margin-top:64px">그 이전의 20년</h2>
+      <h2 style="margin-top:64px">웹 서비스를 설계하던 시기</h2>
       <p class="lede">상세페이지 이전에는 웹 서비스의 UX와 화면을 설계했습니다. 사용자가 어디서 멈추고 무엇을 못 찾는지 보는 훈련이 지금 설계의 기반입니다.</p>
 
       <div class="grid6">
@@ -436,18 +442,17 @@ footer{padding:26px 0 60px}
 <!-- 05 이력 -->
 <section class="section">
   <div class="block">
-    <div class="rail"><b>05</b><span>이력</span><i></i></div>
+    <div class="rail"><b>05</b><span>경력</span><i></i></div>
     <div class="content">
-      <h2>커리어</h2>
-      <ul class="career">
-        <li class="now"><span class="yr">2025 —</span><span><span class="co">주식회사 브랜드숲</span><span class="ro">대표 · 상세페이지 설계 및 제작</span></span></li>
-        <li><span class="yr">2021 — 2022</span><span><span class="co">잉카인터넷</span><span class="ro">UX·UI 디자인</span></span></li>
-        <li><span class="yr">2020 — 2021</span><span><span class="co">이피엔스</span><span class="ro">UX·UI 디자인</span></span></li>
-        <li><span class="yr">2019 — 2020</span><span><span class="co">인라이플</span><span class="ro">UX·UI 디자인</span></span></li>
-        <li><span class="yr">2016 — 2018</span><span><span class="co">SK엠앤서비스</span><span class="ro">서비스기획 Unit UX디자인팀 · 매니저</span></span></li>
-        <li><span class="yr">2015 — 2016</span><span><span class="co">키스템프</span><span class="ro">웹 디자인</span></span></li>
-        <li><span class="yr">2009 — 2014</span><span><span class="co">플랜아이</span><span class="ro">웹 에이전시 · 웹 UX·UI 디자인</span></span></li>
-        <li><span class="yr">2006 — 2008</span><span><span class="co">인터세이브</span><span class="ro">웹 디자인</span></span></li>
+      <h2>화면 앞에서 사람을 본 시간.</h2>
+      <div class="tenure">
+        <p class="tenure-num">20<span>년</span></p>
+        <p class="tenure-cap">2006년부터 설계해 왔습니다</p>
+      </div>
+      <ul class="fields">
+        <li><span class="k">웹 에이전시</span><span class="v">대형 브랜드 사이트의 정보 구조와 화면을 설계했습니다. 하루 수만 명이 지나가는 화면에서 사람이 어디서 멈추는지 보는 훈련이었습니다.</span></li>
+        <li><span class="k">인하우스 UX</span><span class="v">서비스기획 조직에서 UX·화면 설계를 맡았습니다. 만들고 끝이 아니라 숫자로 확인하고 고치는 사이클을 반복했습니다.</span></li>
+        <li class="now"><span class="k">브랜드숲</span><span class="v">2025년 법인을 세우고, 그 20년의 기준을 상세페이지 설계에 적용하고 있습니다.</span></li>
       </ul>
     </div>
   </div>
